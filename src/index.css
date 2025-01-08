@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-cover-img {
+  background-image: url('../src/assets/bg-image.png'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+}
+.bg-cover-img-our-service {
+  background-image: url('../src/assets/our-service-bg-img.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+}
+
+.over-work::-webkit-scrollbar {
+   display:none;
+ }
