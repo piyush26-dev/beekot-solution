@@ -4,10 +4,46 @@ import iconOne from "../../assets/icon-1.png";
 import OurWorkIconOne from "../../assets/our-work-icon-3.png";
 import OurWorkIconTwo from "../../assets/our-work-icon-4.png";
 import { MoveRight } from "lucide-react";
+import OurServiceIconOne from "../../assets/our-service-1.png";
+import OurServiceIconTwo from "../../assets/our-service-2.png";
+import OurServiceIconThree from "../../assets/our-service-3.png";
+import OurServiceIconFour from "../../assets/our-service-4.png";
+import OurServiceRectangleAwrrow from "../../assets/our-sercive-rectangle-arrow.png";
+
+const ourServiceData = [
+  {
+    id: 1,
+    name: "Start Up Services",
+    icon: OurServiceIconOne,
+    vector: OurServiceRectangleAwrrow,
+    card_count: "01",
+  },
+  {
+    id: 2,
+    name: "Web/ Mobile Development",
+    icon: OurServiceIconTwo,
+    vector: OurServiceRectangleAwrrow,
+    card_count: "02",
+  },
+  {
+    id: 3,
+    name: "Creative Services",
+    icon: OurServiceIconThree,
+    vector: OurServiceRectangleAwrrow,
+    card_count: "03",
+  },
+  {
+    id: 4,
+    name: "Digital Marketing",
+    icon: OurServiceIconFour,
+    vector: OurServiceRectangleAwrrow,
+    card_count: "04",
+  },
+];
 
 const OurServices = () => {
   return (
-    <section className="relative w-full h-screen bg-cover-img-our-service">
+    <section className="relative w-full overflow-hidden h-[75rem] sm:h-screen md:h-[44rem] bg-cover-img-our-service">
       <div className="absolute inset-0 bg-secondry bg-opacity-75">
         <div className="container mx-auto px-6 py-16 relative z-10 flex flex-col items-center justify-center text-center text-white space-y-8">
           <motion.div
@@ -33,8 +69,44 @@ const OurServices = () => {
           >
             Our Services
           </motion.h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 py-4 relative z-10"></div>
-          <div className="w-full flex items-center justify-center">
+          <div className="sm:gap-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 md:gap-1 gap-4 py-4 relative z-10">
+            {ourServiceData.map((service) => (
+              <motion.div
+                key={service.id}
+                className="bg-button-text/70 md:bg-transparent sm:p-0 cursor-pointer text-black-heading relative rounded-xl flex flex-col items-center justify-center md:p-2"
+                whileHover={{ scale: 1.05 }}
+              >
+                <div className="shadow-md rounded-xl rounded-br-3xl rounded-bl-3xl md:rounded-full z-10 bg-white p-4 md:p-8 sm:p-6 md:space-y-8 sm:space-y-8 space-y-4 w-full sm:w-[15rem] md:w-[15rem] sm:h-[11rem] md:h-[15rem]">
+                  <div className="flex items-center justify-center">
+                    <div className="w-[2.5rem] ">
+                      <img src={service.icon} className="w-full h-full" />
+                    </div>
+                  </div>
+                  <h1 className="font-heading text-lg sm:text-xl md:text-xl font-semibold sm:mb-4  md:mb-4 text-center">
+                    {service.name}
+                  </h1>
+                </div>
+                <div className="sm:hidden md:block hidden absolute bottom-[-4rem] left-[4.2rem] w-[4rem] sm:w-[4.9rem] md:w-[7.5rem] z-20">
+                  <img src={service.vector} className="w-full h-full" />
+                  <div
+                    className="absolute top-[4rem]  left-[2rem] text-[#FFF] text-sm font-bold"
+                    style={{ color: "#FFF" }}
+                  >
+                    {" "}
+                    <h1 className="font-heading text-lg sm:text-3xl md:text-5xl font-semibold mb-4">
+                      {service.card_count}
+                    </h1>
+                  </div>
+                </div>
+                <div className="flex items-center justify-center md:hidden p-4">
+                  <h1 className="font-heading text-lg sm:text-3xl md:text-5xl font-semibold text-white">
+                    {service.card_count}
+                  </h1>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          <div className="w-full flex items-center justify-center pt-[3rem] md:pt-[4rem]">
             <motion.button
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

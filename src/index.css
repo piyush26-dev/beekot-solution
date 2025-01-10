@@ -16,3 +16,12 @@
 .over-work::-webkit-scrollbar {
    display:none;
  }
+
+ .no-scroll {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.no-scroll .fixed {
+  pointer-events: auto;
+}

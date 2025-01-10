@@ -55,8 +55,8 @@ const OurWork = [
 
 const OurWorkTwo = () => {
   return (
-    <div className="bg-white py-16">
-      <div className="container mx-auto px-6 relative">
+    <div className="bg-white py-16 overflow-hidden">
+      <div className="container mx-auto px-6 relative space-y-8">
         <div className="w-full flex flex-col justify-center items-start  space-y-8">
           <div className="px-6 w-full space-y-8">
             <div className="flex items-center justify-center w-full">
@@ -82,45 +82,45 @@ const OurWorkTwo = () => {
               </motion.h1>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 py-4 relative z-10">
-            {OurWork.map((work) => (
-              <motion.div
-                key={work.id}
-                className="cursor-pointer text-black-heading relative rounded-xl flex items-center justify-center p-2"
-                whileHover={{ scale: 1.05 }}
-              >
-                <div className=" shadow-md rounded-xl h-full w-full z-10 bg-white p-4 md:p-8 sm:p-6 md:space-y-8 sm:space-y-8 space-y-4">
-                  <h1 className="font-heading text-lg sm:text-xl md:text-2xl font-bold sm:mb-4  md:mb-4 text-center">
-                    {work.name}
+        </div>
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))]  gap-8 py-4 relative z-10">
+          {OurWork.map((work) => (
+            <motion.div
+              key={work.id}
+              className="cursor-pointer text-black-heading relative rounded-xl flex items-center justify-center p-2"
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className=" shadow-md rounded-xl h-full w-full z-10 bg-white p-4 md:p-8 sm:p-6 md:space-y-8 sm:space-y-8 space-y-4">
+                <h1 className="font-heading text-lg sm:text-xl md:text-2xl font-bold sm:mb-4  md:mb-4 text-center">
+                  {work.name}
+                </h1>
+                <p className="font-text  text-xs md:text-lg font-medium max-w-5xl">
+                  {work.paragraph}
+                </p>
+              </div>
+              <div className="absolute top-[-0.4rem] left-[-0.4rem] w-[8rem] sm:w-[9rem] md:w-[13.2rem] -z-0">
+                <img src={work.box} className="w-full h-full" />
+              </div>
+              <div className="absolute top-0 right-0 w-[8rem] sm:w-[9rem] md:w-[13.2rem]">
+                <img src={work.vector_dot} className="w-full h-full" />
+              </div>
+              <div className="absolute bottom-0 right-0 w-[4rem] sm:w-[4.9rem] md:w-[7.5rem] z-20">
+                <img src={work.vector} className="w-full h-full" />
+                <div
+                  className="absolute bottom-0 sm:bottom-[-0.5rem] right-2 text-[#FFF] text-sm font-bold"
+                  style={{ color: "#FFF" }}
+                >
+                  {" "}
+                  <h1 className="font-heading text-lg sm:text-3xl md:text-5xl font-semibold mb-4">
+                    {work.card_count}
                   </h1>
-                  <p className="font-text  text-xs md:text-lg font-medium max-w-5xl">
-                    {work.paragraph}
-                  </p>
                 </div>
-                <div className="absolute top-[-0.4rem] left-[-0.4rem] w-[8rem] sm:w-[9rem] md:w-[13.2rem] -z-0">
-                  <img src={work.box} className="w-full h-full" />
-                </div>
-                <div className="absolute top-0 right-0 w-[8rem] sm:w-[9rem] md:w-[13.2rem]">
-                  <img src={work.vector_dot} className="w-full h-full" />
-                </div>
-                <div className="absolute bottom-0 right-0 w-[4rem] sm:w-[4.9rem] md:w-[7.5rem] z-20">
-                  <img src={work.vector} className="w-full h-full" />
-                  <div
-                    className="absolute bottom-0 sm:bottom-[-0.5rem] right-2 text-[#FFF] text-sm font-bold"
-                    style={{ color: "#FFF" }}
-                  >
-                    {" "}
-                    <h1 className="font-heading text-lg sm:text-3xl md:text-5xl font-semibold mb-4">
-                      {work.card_count}
-                    </h1>
-                  </div>
-                </div>
-                <div className="absolute bottom-0 left-0 h-[9.5rem] sm:h-[9.5rem] md:h-[15.5rem]">
-                  <img src={work.line} className="w-full h-full" />
-                </div>
-              </motion.div>
-            ))}
-          </div>
+              </div>
+              <div className="absolute bottom-0 left-0 h-[9.5rem] sm:h-[9.5rem] md:h-[15.5rem]">
+                <img src={work.line} className="w-full h-full" />
+              </div>
+            </motion.div>
+          ))}
         </div>
         <motion.div
           className="absolute left-[2rem] top-[2rem] md:left-[7rem] md:top-[3rem]  w-20 h-20  z-10"

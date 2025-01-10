@@ -20,14 +20,14 @@ const Banner = () => {
             Beekot Solutions, a leading Indian company in Asia, drives
           </p>
           <motion.div
-            className="text-left font-text border border-white/70 text-sm  text-white rounded-md px-6 py-3 shadow-lg md:w-[15rem]"
+            className="text-left font-text border border-white/70 text-sm  text-white rounded-md px-6 py-3 shadow-lg md:w-[18rem]"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
             <Typewriter
               options={{
-                strings: ["Hello", "Welcome"],
+                strings: ["Hello There !", "Welcome To Beekot Solutions"],
                 autoStart: true,
                 loop: true,
                 delay: 75,
