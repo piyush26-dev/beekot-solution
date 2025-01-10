@@ -58,29 +58,29 @@ const Footer = () => {
 
   return (
     <motion.footer
-      className="bg-[#111D15] text-white pt-16 md:pt-[8rem] pb-6"
+      className="bg-[#111D15] text-white pt-16 lg:pt-[8rem] pb-6"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
       <div className="container mx-auto px-6">
         {/* Footer Top Section */}
-        <div className="flex flex-wrap justify-between items-start md:pb-[3rem]">
+        <div className="flex flex-wrap justify-between items-start md:pb-[1rem]  lg:pb-[3rem]">
           {/* Left Section */}
-          <div className="w-full md:w-1/3 space-y-6 pb-4">
+          <div className="w-full lg:w-1/3 space-y-6 pb-4">
             <img
               src={Logo}
               alt="Beekot Solutions Logo"
               className="w-[15rem] md:w-[18rem]"
             />
-            <p className="font-text text-xs md:text-base  text-[#B8C1BB] leading-relaxed font-normal md:w-[23rem]">
+            <p className="font-text text-xs md:text-base  text-[#B8C1BB] leading-relaxed font-normal md:w-[23rem] lg:w-[20rem] xl:w-[23rem] md:pb-4">
               Stay updated with our latest service updates, and helpful articles
               on maintaining a website.
             </p>
           </div>
 
           {/* Middle Section - Links */}
-          <div className="flex flex-wrap gap-8 w-full md:w-2/3 justify-between font-text">
+          <div className="flex flex-wrap gap-8 w-full lg:w-2/3 justify-between font-text">
             {/* Column 1 */}
             <div>
               <h3 className="font-semibold text-lg mb-4">Company</h3>
@@ -171,7 +171,7 @@ const Footer = () => {
 
                 <div className="">
                   <motion.button
-                  type="button"
+                    type="button"
                     onClick={handleSubmit}
                     whileHover={{ scale: 1.1 }}
                     disabled={loading}

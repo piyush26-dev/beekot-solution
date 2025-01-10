@@ -32,8 +32,8 @@ const Support = () => {
   return (
     <div className="bg-white py-16">
       <div className="container mx-auto px-6 ">
-        <div className="w-full md:flex gap-2">
-          <div className="w-full md:w-3/5 space-y-4">
+        <div className="w-full lg:flex gap-2">
+          <div className="w-full lg:w-3/5 space-y-4 md:pb-12">
             <div className="w-full mb-8">
               <div className="inline-block bg-secondry rounded-full shadow-lg py-1 px-4">
                 <div className="flex items-center gap-4  md:w-[9rem]">
@@ -81,7 +81,7 @@ const Support = () => {
               </div>
             </div>
           </div>
-          <div className="w-full md:w-2/5 flex items-center justify-center py-6">
+          <div className="w-full lg:w-2/5 flex items-center justify-center py-6">
             <img src={supportImg} />
           </div>
         </div>

@@ -38,8 +38,8 @@ const Banner = () => {
       </section>
       {/* Stats Section */}
       <div className="md:absolute bottom-[-25px] w-full ">
-        <div className="container mx-auto px-6">
-          <div className="bg-secondry shadow-lg rounded-2xl py-4 px-4 flex flex-col md:flex-row justify-between items-center md:items-stretch">
+        <div className="container mx-auto md:px-6">
+          <div className="bg-secondry md:shadow-lg md:rounded-2xl py-4 px-4 flex flex-col md:flex-row justify-between items-center md:items-stretch">
             {/* Stat Item */}
             <div className="flex-1 text-center border-b md:border-b-0 md:border-r-2 border-button-text p-4">
               <h2 className="text-3xl font-bold text-button-text">

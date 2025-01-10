@@ -10,7 +10,7 @@ import OurWorkIconTwo from "../../assets/our-work-icon-2.png";
 const OurWork = () => {
   return (
     <div className="bg-secondry md:pt-16 md:pb-[12rem] py-12 overflow-x-hidden over-work ">
-      <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center justify-center relative   ">
+      <div className="container mx-auto px-6 flex flex-col md:flex-col lg:flex-row items-center justify-center relative   ">
         <div className="w-full md:pt-12 flex flex-col justify-center items-start  space-y-8  ">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -71,7 +71,7 @@ const OurWork = () => {
             <img src={OurWorkIconTwo} className="w-full h-full" />
           </motion.div>
           <motion.div
-            className=" md:absolute md:h-[40rem] top-[-2rem] md:right-[-6.7rem]  "
+            className=" lg:absolute lg:h-[40rem] top-[-2rem] lg:right-[-6.7rem]  "
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}

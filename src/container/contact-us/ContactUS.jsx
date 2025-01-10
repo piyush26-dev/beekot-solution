@@ -95,8 +95,8 @@ const ContactUS = () => {
   return (
     <div className="bg-white py-16">
       <div className="container mx-auto px-6">
-        <div className="w-full md:flex block gap-4 items-center">
-          <div className="w-full md:w-1/2 space-y-4 md:p-0 pb-6">
+        <div className="w-full lg:flex block gap-4 items-center">
+          <div className="w-full lg:w-1/2 space-y-4 lg:p-0 pb-6">
             <div className="w-full">
               <motion.h1
                 className="font-heading text-4xl md:text-5xl font-semibold text-black-heading md:tracking-wide md:leading-relaxed md:border-none md:pb-0  border-b-4 border-black/35 pb-4"
@@ -133,7 +133,7 @@ const ContactUS = () => {
               ))}
             </div>
           </div>
-          <div className="w-full md:w-1/2 rounded-xl bg-button-text p-6 space-y-4 text-white">
+          <div className="w-full lg:w-1/2 rounded-xl bg-button-text p-6 space-y-4 text-white">
             <p className="font-text  text-sm  font-normal ">Contact info</p>
             <h1 className="font-heading text-3xl font-semibold">
               Keep In Touch

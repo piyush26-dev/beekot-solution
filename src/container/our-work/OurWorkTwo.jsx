@@ -123,14 +123,14 @@ const OurWorkTwo = () => {
           ))}
         </div>
         <motion.div
-          className="absolute left-[2rem] top-[2rem] md:left-[7rem] md:top-[3rem]  w-20 h-20  z-10"
+          className="absolute left-[2rem] top-[2rem] lg:left-[7rem] lg:top-[3rem]  w-20 h-20  z-10"
           animate={{ scale: [1, 1.2, 1] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         >
           <img src={OurWorkIconOne} className="w-full h-full" />
         </motion.div>
         <motion.div
-          className="absolute right-[3rem] top-[1rem] md:right-[15rem] md:top-[1rem]  w-20 h-20  z-10"
+          className="absolute right-[3rem] top-[1rem] lg:right-[15rem] lg:top-[1rem]  w-20 h-20  z-10"
           animate={{ scale: [1, 1.2, 1] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         >
