@@ -116,9 +116,14 @@ const ContactUS = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                 >
-                  <div className="bg-button-text rounded-full flex items-center justify-center w-[2.2rem] h-[2.2rem] ">
-                    <img src={data.Icon} className=" w-4" />
+                  <div className="bg-button-text rounded-full flex items-center justify-center w-[2.2rem] h-[2.2rem] min-w-[2.2rem] min-h-[2.2rem]">
+                    <img
+                      src={data.Icon}
+                      className="w-[1rem] h-[1rem] object-contain"
+                      alt="Icon"
+                    />
                   </div>
+
                   <div className="">
                     <h2 className="font-heading text-sm md:text-base font-semibold text-black-heading">
                       {data.title}

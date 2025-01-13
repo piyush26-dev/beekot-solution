@@ -7,7 +7,7 @@ import CountUp from "react-countup";
 const Banner = () => {
   return (
     <div className="reletive">
-      <section className="relative w-full h-screen bg-cover-img">
+      <section className="relative w-full h-screen bg-cover-img" id="banner">
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
           <h1

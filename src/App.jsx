@@ -16,9 +16,9 @@ function App() {
     <>
       <div id="banner">
         <Navbar />
-        <Banner />
       </div>
       <div>
+        <Banner />
         <IndustryWeServe />
         <OurWork />
         <OurWorkTwo />

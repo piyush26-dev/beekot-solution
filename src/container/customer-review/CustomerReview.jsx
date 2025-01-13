@@ -99,7 +99,7 @@ const CustomerReview = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.3 }}
             />
-            <div className="absolute inset-0 flex flex-col justify-center p-6">
+            <div className="absolute lg:top-[-0.7rem] md:top-[1rem] sm:top-[2rem] top-[-1.3rem] flex flex-col justify-center p-6">
               <div className="flex p-2 lg:p-4 md:p-4">
                 <div className="flex items-center w-3/5">
                   <div className="rounded-xl h-[6rem] w-[4rem] lg:h-[13rem] lg:w-[9rem] md:h-[15rem] md:w-[11rem] xl:h-[15rem] xl:w-[11rem]">

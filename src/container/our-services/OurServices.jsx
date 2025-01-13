@@ -125,14 +125,14 @@ const OurServices = () => {
 
         {/* Floating Icons */}
         <motion.div
-          className="absolute left-[0.2rem] top-[8rem] lg:left-[18.5rem] lg:top-[9.5rem] w-20 h-20 z-10"
+          className="absolute left-[0.2rem] top-[8rem] lg:left-[18.5rem] lg:top-[9.5rem] md:w-20 md:h-20 w-10 h-10 z-10"
           animate={{ scale: [1, 1.2, 1] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         >
           <img src={OurWorkIconOne} className="w-full h-full" />
         </motion.div>
         <motion.div
-          className="absolute right-0 top-[2rem] lg:right-[24rem] lg:top-[2rem] w-20 h-20 z-10"
+          className="absolute right-0 top-[5rem] lg:right-[24rem] lg:top-[2rem] md:w-20 md:h-20 w-10 h-10 z-10"
           animate={{ scale: [1, 1.2, 1] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         >

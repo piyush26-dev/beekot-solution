@@ -57,14 +57,14 @@ const OurWork = () => {
             Learn More <MoveRight className="text-white/80" />
           </motion.button>
           <motion.div
-            className="absolute left-[20rem] top-[15rem] md:left-[22rem] md:top-[22rem]  w-20 h-20 "
+            className="absolute right-[2rem] top-[24rem] md:left-[22rem] md:top-[22rem] w-10 h-10  md:w-20 md:h-20 "
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
           >
             <img src={OurWorkIconOne} className="w-full h-full" />
           </motion.div>
           <motion.div
-            className="absolute left-[30rem] top-[19rem] md:left-[32rem] md:top-[29rem]  w-20 h-20 "
+            className="absolute right-[5rem] top-[20rem] md:left-[32rem] md:top-[29rem]  md:w-20 md:h-20  w-10 h-10 "
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
           >
