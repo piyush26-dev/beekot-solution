@@ -37,7 +37,7 @@ const SupportTwo = () => {
             team of seasoned experts, many boasting over fifteen years of
             hands-on experience, we're a powerhouse of knowledge and skill. Our
             approach? Delivering tailored solutions swiftly, ensuring tangible
-            value every single tim
+            value every single time
           </p>
         </div>
         <div className="w-full ">

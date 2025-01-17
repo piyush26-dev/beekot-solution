@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import iconOne from "../../assets/icon-1.png";
-import OurWorkIconOne from "../../assets/our-work-icon-3.png";
-import OurWorkIconTwo from "../../assets/our-work-icon-4.png";
+import OurWorkIconOne from "../../assets/our-work-icon.png";
+import OurWorkIconTwo from "../../assets/our-work-icon-2.png";
 import { MoveRight } from "lucide-react";
 import OurServiceIconOne from "../../assets/our-service-1.png";
 import OurServiceIconTwo from "../../assets/our-service-2.png";

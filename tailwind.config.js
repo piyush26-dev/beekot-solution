@@ -21,7 +21,8 @@ export default {
       },
       colors: {
         "primery": "#598C8C", // Copper Mineral Green
-        "secondry": "#E8F4FF", // Kodama White
+        // "secondry": "#E8F4FF", // Kodama White
+        "secondry": "#f7fdf6", // Kodama White
         "button-text": "#2F6F6F", //Lakelike
         "text-black": "#0F0E0E", // Black Sheep
         "black-heading": "#111D15", // Nightmare

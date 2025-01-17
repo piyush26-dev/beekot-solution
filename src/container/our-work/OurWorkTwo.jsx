@@ -2,8 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import iconOne from "../../assets/icon-1.png";
 import dotedImg from "../../assets/our-work-doted.png";
-import OurWorkIconOne from "../../assets/our-work-icon-3.png";
-import OurWorkIconTwo from "../../assets/our-work-icon-4.png";
+// import OurWorkIconOne from "../../assets/our-work-icon-3.png";
+// import OurWorkIconTwo from "../../assets/our-work-icon-4.png";
+import OurWorkIconOne from "../../assets/our-work-icon.png";
+import OurWorkIconTwo from "../../assets/our-work-icon-2.png";
 import OurWorkBoxOne from "../../assets/our-work-box-1.png";
 import OurWorkVectorOne from "../../assets/our-work-vector-1.png";
 import OurWorkLineDotOne from "../../assets/our-work-line-dot-1.png";
@@ -27,29 +29,37 @@ const OurWork = [
     vector: OurWorkVectorOne,
     line: OurWorkLineDotOne,
     vector_dot: OurWorkVectorDotOne,
-    card_count:"01"
+    card_count: "01",
   },
   {
     id: 2,
     name: "Technology",
     paragraph:
       "In order to stay competitive, create jobs and increase revenue, small businesses need to seriously consider technology trends and how to leverage them. Beekot Solutions helps our customers to create more revenue opportunities through advanced technologies.",
-    box: OurWorkBoxTwo,
-    vector: OurWorkVectorTwo,
-    line: OurWorkLineDotTwo,
-    vector_dot: OurWorkVectorDotTwo,
-    card_count:"02"
+    // box: OurWorkBoxTwo,
+    // vector: OurWorkVectorTwo,
+    // line: OurWorkLineDotTwo,
+    // vector_dot: OurWorkVectorDotTwo,
+    box: OurWorkBoxOne,
+    vector: OurWorkVectorOne,
+    line: OurWorkLineDotOne,
+    vector_dot: OurWorkVectorDotOne,
+    card_count: "02",
   },
   {
     id: 3,
     name: "Innovation",
     paragraph:
       "Innovation is key to different approaches you can take for your business. Our Experts help you in a way of Incremental, Disruptive, Architectural and Radical Innovation in your business can mean introducing new or improved products, services or processes to remain competitive in the market.",
-    box: OurWorkBoxThree,
-    vector: OurWorkVectorThree,
-    line: OurWorkLineDotThree,
-    vector_dot: OurWorkVectorDotThree,
-    card_count:"03"
+    // box: OurWorkBoxThree,
+    // vector: OurWorkVectorThree,
+    // line: OurWorkLineDotThree,
+    // vector_dot: OurWorkVectorDotThree,
+    box: OurWorkBoxOne,
+    vector: OurWorkVectorOne,
+    line: OurWorkLineDotOne,
+    vector_dot: OurWorkVectorDotOne,
+    card_count: "03",
   },
 ];
 
@@ -66,7 +76,7 @@ const OurWorkTwo = () => {
                     <img src={iconOne} className="w-full h-full object-fill" />
                   </div>
                   <p className="text-button-text font-text font-semibold ">
-                    Our Work
+                    We Serve
                   </p>
                 </div>
               </div>
@@ -78,7 +88,7 @@ const OurWorkTwo = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, delay: 0.2 }}
               >
-                What we do
+                We Serve
               </motion.h1>
             </div>
           </div>

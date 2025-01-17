@@ -90,14 +90,16 @@ const Navbar = () => {
   //   : "bg-white/35 backdrop-blur-lg text-white";
 
     const bgClass = isSecondary
-      ? "bg-[#E8F4FF] text-text-black"
+      ? "bg-secondry text-text-black"
       : "bg-secondry backdrop-blur-lg ";
 
   // const hambargerColor = isSecondary ? "text-text-black" : "text-white/70";
 
     const hambargerColor = isSecondary ? "text-text-black" : "text-text-black";
 
-  const logoSrc = isSecondary ? logoBlack : logo;
+  // const logoSrc = isSecondary ? logoBlack : logo;
+
+   const logoSrc = isSecondary ? logo : logo;
 
   const handleConsultant = () => {
     navigate("/contact");
@@ -116,7 +118,7 @@ const Navbar = () => {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
         >
-          <div className="lg:w-[15rem] md:w-[12rem] w-[7.5rem]">
+          <div className="lg:w-[18rem] md:w-[14rem] w-[10rem]">
             <img
               src={logoSrc}
               className="w-full h-full object-fill duration-300 transition-all"
@@ -237,7 +239,8 @@ const Navbar = () => {
           initial={{ x: "100%" }}
           animate={{ x: 0 }}
           exit={{ x: "100%" }}
-          className="fixed top-0 right-0 w-full h-full bg-secondry shadow-lg z-40 p-6 flex flex-col gap-6"
+          className="fixed top-0 right-0 w-full h-full bg-[#f7fdf6] shadow-lg z-40 p-6 flex flex-col gap-6"
+          // className="fixed top-0 right-0 w-full h-full bg-secondry shadow-lg z-40 p-6 flex flex-col gap-6"
         >
           <motion.div
             className="text-2xl font-bold"
@@ -246,7 +249,7 @@ const Navbar = () => {
           >
             <div className="w-[10rem]">
               <img
-                src={logoBlack}
+                src={logo}
                 className="w-full h-full object-fill duration-300 transition-all"
               />
             </div>
@@ -273,7 +276,7 @@ const Navbar = () => {
                     <AnimatePresence>
                       {isServicesOpen && (
                         <motion.ul
-                          className="mt-2 pl-4 bg-secondry shadow-lg rounded-lg z-50 w-full border border-gray-200 flex flex-col gap-2"
+                          className="mt-2 pl-4 bg-secondry shadow-lg rounded-lg z-50 w-full border border-gray-200 flex flex-col gap-2 py-4"
                           initial="hidden"
                           animate="visible"
                           exit="exit"
