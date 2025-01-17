@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Menu, X } from "lucide-react";
-import logo from "../../assets/logo-top-nav.png";
+import logo from "../../assets/header-logo-two.png";
 import logoBlack from "../../assets/logo-black.png";
 import { NavLink, useNavigate } from "react-router-dom";
 
@@ -85,11 +85,17 @@ const Navbar = () => {
      navigate(route); // Navigate to route
    };
 
-  const bgClass = isSecondary
-    ? "bg-[#E8F4FF] text-text-black"
-    : "bg-white/35 backdrop-blur-lg text-white";
+  // const bgClass = isSecondary
+  //   ? "bg-[#E8F4FF] text-text-black"
+  //   : "bg-white/35 backdrop-blur-lg text-white";
 
-  const hambargerColor = isSecondary ? "text-text-black" : "text-white/70";
+    const bgClass = isSecondary
+      ? "bg-[#E8F4FF] text-text-black"
+      : "bg-secondry backdrop-blur-lg ";
+
+  // const hambargerColor = isSecondary ? "text-text-black" : "text-white/70";
+
+    const hambargerColor = isSecondary ? "text-text-black" : "text-text-black";
 
   const logoSrc = isSecondary ? logoBlack : logo;
 
