@@ -212,14 +212,35 @@ const Footer = () => {
 
         {/* Footer Bottom Section */}
         <motion.div
-          className="border-t border-[#B8C1BB] mt-8 pt-6 text-center text-sm text-[#B8C1BB]"
+          className="border-t border-[#B8C1BB] mt-8 pt-6 text-sm text-[#B8C1BB]"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <p className="font-text text-xs md:text-base  text-[#B8C1BB] leading-relaxed font-normal">
-            Copyright ©2025 All Rights Reserved.
-          </p>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-2 text-center md:text-left">
+            <p className="font-text text-xs md:text-base text-[#B8C1BB] leading-relaxed font-normal">
+              Copyright ©2025 All Rights Reserved By{" "}
+              <span
+                className="text-primery cursor-pointer font-semibold"
+                onClick={() =>
+                  window.open("https://beekotsolution.com/", "_blank")
+                }
+              >
+                Beekot Solution
+              </span>
+              .
+            </p>
+            <p className="font-text text-xs md:text-base text-[#B8C1BB] leading-relaxed font-normal">
+              Design By{" "}
+              <span
+                className="text-primery cursor-pointer font-semibold"
+                onClick={() => window.open("https://digiflex.ai/", "_blank")}
+              >
+                Digiflex.ai
+              </span>
+              , A Website designing company.
+            </p>
+          </div>
         </motion.div>
       </div>
     </motion.footer>

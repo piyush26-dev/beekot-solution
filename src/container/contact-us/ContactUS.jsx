@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 import ContactUSIconOne from "../../assets/contact-us-1.png";
 import ContactUSIconTwo from "../../assets/contact-us-2.png";
 import ContactUSIconThree from "../../assets/contact-us-3.png";
@@ -46,6 +48,7 @@ const ContactUS = () => {
     full_name: "",
     email: "",
     message: "",
+    phone_no: "",
   };
 
   const [userDetails, setUserDetails] = useState(initialState);
@@ -65,6 +68,19 @@ const ContactUS = () => {
       ...errors,
     });
   };
+
+    const handlePhoneChange = (value, country) => {
+      const phoneWithoutCountryCode = value
+        .replace(`+${country.dialCode}`, "")
+        .trim();
+      const e = {
+        target: {
+          value: phoneWithoutCountryCode,
+          name: "phone_no",
+        },
+      };
+      handleChange(e);
+    };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -111,7 +127,7 @@ const ContactUS = () => {
               {contactUsData.map((data, index) => (
                 <motion.div
                   key={index}
-                  className="flex  gap-4 rounded-lg bg-[#FBFBFB] text-text-black p-4 w-full"
+                  className="flex gap-4 rounded-lg bg-[#FBFBFB] text-text-black p-4 w-full"
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
@@ -124,14 +140,28 @@ const ContactUS = () => {
                     />
                   </div>
 
-                  <div className="">
+                  <div>
                     <h2 className="font-heading text-sm md:text-base font-semibold text-black-heading">
                       {data.title}
                     </h2>
                     <h2 className="font-heading text-xs md:text-sm font-normal text-[#666666]">
-                      {data.title === "Call Us"
-                        ? formatPhoneNumber(data.contant)
-                        : data.contant}
+                      {data.title === "Call Us" ? (
+                        <a
+                          href={`tel:${data.contant}`}
+                          className="text-[#666666] hover:text-blue-500 duration-300 transition-all"
+                        >
+                          {formatPhoneNumber(data.contant)}
+                        </a>
+                      ) : data.title === "Email Now" ? (
+                        <a
+                          href={`mailto:${data.contant}`}
+                          className="text-[#666666] hover:text-blue-500 duration-300 transition-all"
+                        >
+                          {data.contant}
+                        </a>
+                      ) : (
+                        data.contant
+                      )}
                     </h2>
                   </div>
                 </motion.div>
@@ -174,6 +204,31 @@ const ContactUS = () => {
                 {errorMessages?.email && (
                   <span className="font-text label-text-alt text-white/70">
                     {errorMessages?.email}
+                  </span>
+                )}
+              </div>
+              <div className="w-full ">
+                <PhoneInput
+                  country={"in"}
+                  defaultCountry="in"
+                  value={userDetails.phone_no}
+                  onChange={handlePhoneChange}
+                  inputStyle={{
+                    border: "none",
+                    width: "100%",
+                    borderBottom: "none",
+                    borderRadius: "0",
+                    backgroundColor: "transparent",
+                    fontSize: "0.875rem",
+                    color: "#0F0E0E",
+                  }}
+                  buttonClass="flag-dropdown phone-dropdown"
+                  className="w-full rounded px-4 py-3 bg-white text-text-black text-base outline-none appearance-none focus:outline-none"
+                  inputClass="w-full bg-transparent text-base border-none appearance-none outline-none"
+                />
+                {errorMessages?.phone_no && (
+                  <span className="font-text label-text-alt text-white/70">
+                    {errorMessages?.phone_no}
                   </span>
                 )}
               </div>
