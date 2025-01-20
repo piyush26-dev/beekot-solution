@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, HashRouter } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Navbar from "./container/top-navbar/Navbar";
 import Footer from "./container/footer/Footer";
@@ -17,7 +17,7 @@ import EngagementModel from "./pages/Services/EngagementModel";
 function App() {
   return (
     <>
-      <Router>
+      <HashRouter>
         <div className="">
           <div id="banner">
             <Navbar />
@@ -49,7 +49,7 @@ function App() {
 
           <Footer />
         </div>
-      </Router>
+      </HashRouter>
     </>
   );
 }
