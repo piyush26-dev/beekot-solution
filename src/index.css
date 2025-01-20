@@ -60,6 +60,13 @@
   background-position: center;
 }
 
+.bg-cover-img-about-us {
+  background-image: url('../src/assets/about-bg.png');
+  background-size: cover;
+  background-position: center;
+}
+
+
 
 
 .over-work::-webkit-scrollbar {

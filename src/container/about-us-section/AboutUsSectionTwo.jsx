@@ -40,17 +40,32 @@ const AboutUsSectionTwo = () => {
         </div>
         {/* Stats Section */}
         <div className="w-full pb-4 ">
-          <div className="relative z-10 bg-customer-custom-linear md:shadow-lg md:rounded-2xl py-4 flex flex-col md:flex-row justify-between items-center md:items-stretch">
+          <div className="relative z-10 bg-customer-custom-linear lg:shadow-lg lg:rounded-2xl py-10 flex flex-col lg:flex-row justify-between items-center md:items-stretch">
             {/* Stat Item */}
-            <div className="flex-1 text-center border-b md:border-b-0 md:border-r-2 border-white p-4">
-              <h2 className="text-3xl font-bold text-white">
-                <CountUp end={300} duration={3} />
+            <div className="flex-1 text-center border-b lg:border-b-0 lg:border-r-2 border-white p-4 space-y-2">
+              <h2 className="text-4xl font-bold text-white  flex items-center justify-center">
+                <div className="flex items-baseline gap-1">
+                  <p className="">
+                    <CountUp end={300} duration={3} />
+                  </p>
+                  <motion.span
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{
+                      delay: 4, // Matches the duration of CountUp
+                      duration: 0.3, // Animation duration for the '+'
+                    }}
+                    className=""
+                  >
+                    +
+                  </motion.span>
+                </div>
               </h2>
-              <p className="text-white">Clients Supported</p>
+              <p className="text-white text-xl">Clients Supported</p>
             </div>
 
-            <div className="flex-1 text-center border-b md:border-b-0 md:border-r-2 border-white p-4">
-              <h2 className="text-3xl font-bold text-white  flex items-center justify-center">
+            <div className="flex-1 text-center border-b lg:border-b-0 lg:border-r-2 border-white p-4 space-y-2">
+              <h2 className="text-4xl font-bold text-white  flex items-center justify-center">
                 <div className="flex items-baseline gap-1">
                   <p className="">
                     <CountUp end={20} duration={3} />
@@ -68,11 +83,11 @@ const AboutUsSectionTwo = () => {
                   </motion.span>
                 </div>
               </h2>
-              <p className="text-white">Domain</p>
+              <p className="text-white text-xl">Domain</p>
             </div>
 
-            <div className="flex-1 text-center border-b md:border-b-0 md:border-r-2 border-white p-4">
-              <h2 className="text-3xl font-bold text-white  flex items-center justify-center">
+            <div className="flex-1 text-center border-b lg:border-b-0 lg:border-r-2 border-white p-4 space-y-2">
+              <h2 className="text-4xl font-bold text-white  flex items-center justify-center">
                 <div className="flex items-baseline gap-1">
                   <p className="">
                     <CountUp end={4} duration={3} />
@@ -81,23 +96,23 @@ const AboutUsSectionTwo = () => {
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{
-                      delay: 3, // Matches the duration of CountUp
+                      delay: 4, // Matches the duration of CountUp
                       duration: 0.3, // Animation duration for the '+'
                     }}
                     className=""
                   >
-                    K+
+                    +
                   </motion.span>
                 </div>
               </h2>
-              <p className="text-white">Success Stories</p>
+              <p className="text-white text-xl">Years of Industry Experience</p>
             </div>
 
-            <div className="flex-1 text-center p-4">
-              <h2 className="text-3xl font-bold text-white  flex items-center justify-center">
+            <div className="flex-1 text-center p-4 border-b lg:border-b-0 lg:border-r-2 border-white space-y-2">
+              <h2 className="text-4xl font-bold text-white  flex items-center justify-center">
                 <div className="flex items-baseline gap-1">
                   <p className="">
-                    <CountUp end={30} duration={3} />
+                    <CountUp end={95} duration={3} />
                   </p>
                   <motion.span
                     initial={{ opacity: 0, x: -10 }}
@@ -108,18 +123,21 @@ const AboutUsSectionTwo = () => {
                     }}
                     className=""
                   >
-                    +
+                    %
                   </motion.span>
                 </div>
               </h2>
-              <p className="text-white">Industries Covered</p>
+              <p className="text-white text-xl">Client Retention</p>
+            </div>
+            <div className="flex-1 text-center p-4 flex justify-center items-center">
+              <p className="text-white text-xl">Specialization</p>
             </div>
           </div>
         </div>
       </div>
       <div className="absolute top-[15rem]  hidden lg:block w-full ">
         {" "}
-        <img src={vectorLineAbout} className='w-full h-full' />
+        <img src={vectorLineAbout} className="w-full h-full" />
       </div>
     </section>
   );

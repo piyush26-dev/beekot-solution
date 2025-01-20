@@ -11,37 +11,37 @@ const TestimonialData = [
   {
     id: 1,
     profile: profilePicOne,
-    name: "Madhukar P.",
+    name: "David Cooper",
     contant:
-      "Lorem ipsum dolor sit amet consectetur. Dolor a sapien quis facilisi lacus sed. Feugiat placerat ut morbi auctor sit in. In sagittis sed augue mus tellus.",
+      "We trust Beekot for their innovative solutions and ongoing support. They’ve been instrumental in our growth.",
   },
   {
     id: 2,
     profile: profilePicTwo,
-    name: "Santosh B.",
+    name: "Sarah Mitchell",
     contant:
-      "Lorem ipsum dolor sit amet consectetur. Dolor a sapien quis facilisi lacus sed. Feugiat placerat ut morbi auctor sit in. In sagittis sed augue mus tellus.",
+      "Beekot’s expertise brought our vision to life. Their dedication and attention to detail were outstanding!",
   },
   {
     id: 3,
     profile: profilePicThree,
-    name: "Madhukar P.",
+    name: "Rachel Adams",
     contant:
-      "Lorem ipsum dolor sit amet consectetur. Dolor a sapien quis facilisi lacus sed. Feugiat placerat ut morbi auctor sit in. In sagittis sed augue mus tellus.",
+      "The Beekot team provided exceptional service and support. Their strategies delivered immediate results for our business.",
   },
   {
     id: 4,
     profile: profilePicFour,
-    name: "lorem",
+    name: "Jonathan Hayes",
     contant:
-      "Lorem ipsum dolor sit amet consectetur. Dolor a sapien quis facilisi lacus sed. Feugiat placerat ut morbi auctor sit in. In sagittis sed augue mus tellus.",
+      "Beekot transformed our operations with innovative solutions. Their team's professionalism and commitment were truly remarkable.",
   },
   {
     id: 5,
     profile: profilePicFive,
-    name: "Elisa",
+    name: "Emily Carter",
     contant:
-      "Lorem ipsum dolor sit amet consectetur. Dolor a sapien quis facilisi lacus sed. Feugiat placerat ut morbi auctor sit in. In sagittis sed augue mus tellus.",
+      "Partnering with Beekot was a game-changer. They delivered tailored solutions that exceeded our expectations!",
   },
 ];
 

@@ -16,9 +16,9 @@ const AboutUsSectionThree = () => {
                 About Us
               </h1>
               <p className="font-text  text-sm md:text-lg lg:w-[52rem]  max-w-5xl">
-                Lorem ipsum dolor sit amet consectetur. Dolor a sapien quis
-                facilisi lacus sed. Feugiat placerat ut morbi auctor sit in. In
-                sagittis sed augue mus tellus.
+                At Beekot, we empower businesses with cutting-edge solutions,
+                innovative strategies, and a steadfast commitment to driving
+                success and growth.
               </p>
             </div>
           </div>

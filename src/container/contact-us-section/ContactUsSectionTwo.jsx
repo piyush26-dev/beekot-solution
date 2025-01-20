@@ -224,7 +224,7 @@ const ContactUsSectionTwo = () => {
               )}
             </div>
 
-            <div className="flex items-start space-x-2">
+            {/* <div className="flex items-start space-x-2">
               <input
                 type="checkbox"
                 id="agree"
@@ -236,9 +236,9 @@ const ContactUsSectionTwo = () => {
               >
                 Lorem ipsum dolor sit amet consectetur.
               </label>
-            </div>
+            </div> */}
 
-            <div className="flex items-center justify-end">
+            <div className="">
               <motion.button
                 type="submit"
                 whileHover={{ scale: 1.1 }}
@@ -293,11 +293,14 @@ const ContactUsSectionTwo = () => {
           >
             Don't hesitate to contact us
           </motion.h1>
-          <p className="font-text text-xs md:text-base  text-[#535353] leading-relaxed font-normal md:w-[23rem] lg:w-[33rem]  md:pb-4">
-            Lorem ipsum dolor sit amet consectetur. Sed dapibus facilisis ut
-            ultricies amet neque magna rhoncus. Id placerat auctor pharetra
-            etiam.
-          </p>
+          <div className="w-full">
+            <p className="font-text text-xs xl:text-base  text-[#535353] leading-relaxed font-normal">
+              Our team is ready to assist you with any questions or inquiries.
+            </p>
+            <p className="font-text text-xs xl:text-base  text-[#535353] leading-relaxed font-normal  md:pb-4">
+              <strong>Let’s start the conversation!</strong>
+            </p>
+          </div>
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
             {contactUsData.map((data, index) => (
               <motion.div
