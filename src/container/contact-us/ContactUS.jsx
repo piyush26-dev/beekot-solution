@@ -35,12 +35,13 @@ const contactUsData = [
     title: "Email Now",
     contant: "info@beekotsolution.com",
   },
-  {
-    id: 3,
-    Icon: ContactUSIconThree,
-    title: "Address",
-    contant: "GLOBAL BUSINESS HUB EON Free Zone, Kharadi, Pune, 411014 MH.",
-  },
+  // {
+  //   id: 3,
+  //   Icon: ContactUSIconThree,
+  //   title: "Address",
+  //   contant: "GLOBAL BUSINESS HUB EON Free Zone, Kharadi, Pune, 411014 MH.",
+  //   contant: "",
+  // },
 ];
 
 const ContactUS = () => {

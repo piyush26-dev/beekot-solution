@@ -217,7 +217,7 @@ const Footer = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <div className="flex flex-col md:flex-row items-center justify-between gap-2 text-center md:text-left">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-2 text-center md:text-left">
             <p className="font-text text-xs md:text-base text-[#B8C1BB] leading-relaxed font-normal">
               Copyright ©2025 All Rights Reserved By{" "}
               <span
@@ -230,7 +230,7 @@ const Footer = () => {
               </span>
               .
             </p>
-            <p className="font-text text-xs md:text-base text-[#B8C1BB] leading-relaxed font-normal">
+            {/* <p className="font-text text-xs md:text-base text-[#B8C1BB] leading-relaxed font-normal">
               Design By{" "}
               <span
                 className="text-primery cursor-pointer font-semibold"
@@ -239,7 +239,7 @@ const Footer = () => {
                 Digiflex.ai
               </span>
               , A Website designing company.
-            </p>
+            </p> */}
           </div>
         </motion.div>
       </div>

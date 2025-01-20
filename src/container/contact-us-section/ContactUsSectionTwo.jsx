@@ -9,19 +9,19 @@ import ContactUSIconFour from "../../assets/envelope.png";
 import { inquiriesValidation } from "../../Utils/validation";
 
 const contactUsData = [
-  {
-    id: 1,
-    Icon: ContactUSIconOne,
-    title: "Our Address",
-    contant: "EON Free Zone, Kharadi, Pune, 411014 MH.",
-    background: "#E6E8FB",
-  },
+  // {
+  //   id: 1,
+  //   Icon: ContactUSIconOne,
+  //   title: "Our Address",
+  //   contant: "EON Free Zone, Kharadi, Pune, 411014 MH.",
+  //   background: "#E6E8FB",
+  // },
   {
     id: 2,
     Icon: ContactUSIconTwo,
     title: "Our Phone",
     contant: "Sales:   +91 9860 888 209",
-    contantTwo: "Admin:   +91 9860 888 902",
+    contantTwo: "Admin: +91 9860 888 902",
     background: "#FFEBE8",
   },
   {
