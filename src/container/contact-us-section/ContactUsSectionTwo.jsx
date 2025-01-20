@@ -9,13 +9,13 @@ import ContactUSIconFour from "../../assets/envelope.png";
 import { inquiriesValidation } from "../../Utils/validation";
 
 const contactUsData = [
-  // {
-  //   id: 1,
-  //   Icon: ContactUSIconOne,
-  //   title: "Our Address",
-  //   contant: "EON Free Zone, Kharadi, Pune, 411014 MH.",
-  //   background: "#E6E8FB",
-  // },
+  {
+    id: 1,
+    Icon: ContactUSIconOne,
+    title: "Our Address",
+    contant: "Aone Capital Third Floor Apte Road Shivajinagar Pune 411004",
+    background: "#E6E8FB",
+  },
   {
     id: 2,
     Icon: ContactUSIconTwo,
