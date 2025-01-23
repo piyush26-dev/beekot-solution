@@ -38,14 +38,14 @@ const IndustryWeServe = () => {
       <div className="container mx-auto px-6 space-y-8">
         <div className="flex items-center justify-center">
           <div className="inline-block bg-secondry rounded-full shadow-lg py-1 px-4">
-            <div className="flex items-center gap-4">
+            {/* <div className="flex items-center gap-4">
               <div className="flex items-center justify-center p-2 h-8 w-8 bg-white/70 shadow-md rounded-full">
                 <img src={iconOne} className="w-full h-full object-fill" />
               </div>
               <p className="text-button-text font-text font-semibold ">
                 Industry We Serve
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="flex flex-col items-center justify-center text-center px-4 border-b border-black/35 pb-4">

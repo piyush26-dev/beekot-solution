@@ -56,7 +56,7 @@ const Solution = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, delay: 0.2 }}
               >
-                U.S.-Based IT Services and Technology Solutions
+                Indian Based UAE Operating IT Services and Technology Solutions
               </motion.h1>
               <div className="md:block hidden border-b-4 border-black/35 pb-6 mr-[3rem]"></div>
             </div>
