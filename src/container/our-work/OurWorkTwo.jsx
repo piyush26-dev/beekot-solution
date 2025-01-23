@@ -88,7 +88,7 @@ const OurWorkTwo = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, delay: 0.2 }}
               >
-                We Serve
+                Our Expertise
               </motion.h1>
             </div>
           </div>
