@@ -3,12 +3,22 @@ import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import bgImage from "../../assets/bg-image.png"
 import CountUp from "react-countup";
+import BannerVideoBg from "../../assets/home-bg-baaner.mp4";
 
 const Banner = () => {
   return (
     <div className="reletive">
-      <section className="relative w-full h-screen bg-cover-img" id="banner">
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      <section className="relative w-full h-screen " id="banner">
+        {/* Background Video */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          src={BannerVideoBg} // Replace with the path to your video
+          autoPlay
+          loop
+          muted
+          playsInline
+        ></video>
+        <div className="absolute inset-0 bg-black bg-opacity-70"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
           <h1
             className="font-heading text-4xl md:text-6xl font-bold mb-4"
@@ -17,9 +27,9 @@ const Banner = () => {
             <span className=" text-primery ">BEEKOT</span> SOLUTIONS
           </h1>
           <p className="font-text  text-lg md:text-xl mb-8 max-w-2xl">
-            Beekot Solutions, a leading Indian company in Asia, drives
+            IT Services and Technology Solutions
           </p>
-          <motion.div
+          {/* <motion.div
             className="text-left font-text border border-white/70 text-sm  text-white rounded-md px-6 py-3 shadow-lg md:w-[18rem]"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -33,7 +43,7 @@ const Banner = () => {
                 delay: 75,
               }}
             />
-          </motion.div>
+          </motion.div> */}
         </div>
       </section>
       {/* Stats Section */}
