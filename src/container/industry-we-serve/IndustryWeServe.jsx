@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import iconOne from "../../assets/icon-1.png";
-import industryImage1 from "../../assets/enterprises-img.jpg";
-import industryImage2 from "../../assets/startup-img.jpg";
+import industryImage1 from "../../assets/enterprises-img.png";
+import industryImage2 from "../../assets/startup-img.png";
 import industryImage3 from "../../assets/sme-img.jpg";
-import industryImage4 from "../../assets/government-img.jpg";
+import industryImage4 from "../../assets/government-img.png";
 
 
   const industries = [

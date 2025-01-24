@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import TestimonialsCards from "../../assets/testimonials-cards.png";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import UserImage from "../../assets/user-profile.png";
@@ -8,31 +8,59 @@ const testimonials = [
   {
     id: 1,
     userImg: UserImage, // Replace with actual user image
-    name: "Santosh B.",
-    title: "Business Man",
+    name: "John Doe",
+    title: "Software Engineer",
     rating: 5,
     review:
-      "One of the things I appreciate most about this company is their dedication to understanding their clients' needs. They took the time to listen to my concerns and offered customized solutions that were tailored to my specific needs.Their attention to detail and willingness to go the extra mile truly set them apart. They were able to seamlessly integrate their services with my existing systems.",
+      "This company exceeded my expectations! Their team delivered exceptional results within the given time frame. Highly professional and easy to work with. I particularly appreciated their attention to detail and the way they communicated throughout the entire process. From the initial consultation to the final delivery, everything was seamless. Their expertise helped us achieve our goals faster than we anticipated.",
   },
   {
     id: 2,
     userImg: UserImage, // Replace with actual user image
-    name: "Jane Smith",
-    title: "Business Owner",
+    name: "Lily Smith",
+    title: "Marketing Specialist",
     rating: 4,
     review:
-      "Great experience overall. The team was very helpful and supportive.",
+      "I am impressed by their professionalism and attention to detail. The team was always supportive and delivered great results. Their marketing strategies were innovative and tailored to my needs, which significantly improved my brand’s visibility. They were always available to address my questions and went the extra mile to ensure everything was perfect. I would definitely recommend them to anyone looking to elevate their business.",
   },
   {
     id: 3,
     userImg: UserImage, // Replace with actual user image
-    name: "Alice Brown",
+    name: "James Brown",
     title: "Entrepreneur",
     rating: 5,
     review:
-      "Amazing quality and attention to detail. Will definitely use again!",
+      "Their solutions were tailored perfectly to our needs. It was a pleasure working with such a dedicated team. Highly recommended! Their ability to understand the complexities of my business and suggest actionable solutions made a huge difference. They didn’t just offer generic advice, but rather customized recommendations that added real value to our operations. I look forward to working with them again in the future.",
+  },
+  {
+    id: 4,
+    userImg: UserImage, // Replace with actual user image
+    name: "Emma Wilson",
+    title: "Business Owner",
+    rating: 4,
+    review:
+      "Excellent service with a strong focus on customer satisfaction. The team was approachable, responsive, and helpful throughout the process. They took the time to understand my business goals and delivered results that exceeded my expectations. Their collaborative approach made the entire experience enjoyable, and I felt like my success was just as important to them as it was to me.",
+  },
+  {
+    id: 5,
+    userImg: UserImage, // Replace with actual user image
+    name: "Michael Johnson",
+    title: "Freelancer",
+    rating: 5,
+    review:
+      "The experience was truly amazing. The team showed great dedication and expertise. I’ll definitely collaborate with them again for future projects. From project planning to execution, they kept me informed and involved at every step. Their transparency and commitment to quality are unmatched. Working with them felt less like a transaction and more like a partnership, which is something I truly value.",
+  },
+  {
+    id: 6,
+    userImg: UserImage, // Replace with actual user image
+    name: "Sophia Davis",
+    title: "Graphic Designer",
+    rating: 4,
+    review:
+      "I appreciated the creativity and innovation they brought to the table. Their ideas were fresh and truly made a difference. They not only delivered on time but also ensured that every element aligned perfectly with my vision. Their ability to listen and adapt made the entire process smooth and hassle-free. I am thrilled with the final results and look forward to working with them again in the future.",
   },
 ];
+
 
 const CustomerReview = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -90,8 +118,17 @@ const CustomerReview = () => {
               </motion.button>
             </div>
           </div>
-          <div className="w-full lg:w-1/2 space-y-4 relative">
-            <motion.img
+          <div className="w-full lg:w-1/2  ">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={testimonials[currentIndex].id}
+                initial={{ x: 100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: -100, opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                className="space-y-4 relative w-full"
+              >
+                <motion.img
               src={TestimonialsCards}
               alt="Testimonials Cards"
               className="w-full h-auto rounded-xl"
@@ -101,14 +138,6 @@ const CustomerReview = () => {
             />
             <div className="absolute lg:top-[-0.7rem] md:top-[1rem] sm:top-[2rem] top-[-1.3rem] flex flex-col justify-center p-6">
               <div className="flex p-2 lg:p-4 md:p-4">
-                <div className="flex items-center w-3/5">
-                  <div className="rounded-xl h-[6rem] w-[4rem] lg:h-[13rem] lg:w-[9rem] md:h-[15rem] md:w-[11rem] xl:h-[15rem] xl:w-[11rem]">
-                    <img
-                      src={testimonials[currentIndex].userImg}
-                      className="rounded-xl w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
                 <div className="w-full lg:space-y-2 md:space-y-4 xl:space-y-4">
                   <div className="w-full relative">
                     <div className=" md::space-y-2 lg:space-y-0 xl:space-y-2">
@@ -146,6 +175,9 @@ const CustomerReview = () => {
                 </div>
               </div>
             </div>
+              </motion.div>
+            </AnimatePresence>
+            
 
             <div className="lg:hidden flex items-center justify-center gap-4 pt-6">
               <motion.button

@@ -19,7 +19,7 @@ const Banner = () => {
           playsInline
         ></video>
         <div className="absolute inset-0 bg-black bg-opacity-70"></div>
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+        <div className="pt-[30rem] relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
           <h1
             className="font-heading text-4xl md:text-6xl font-bold mb-4"
             style={{ textShadow: "1px 1px 1px #FFF" }}
