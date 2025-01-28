@@ -105,6 +105,10 @@ const Navbar = () => {
     navigate("/contact");
   };
 
+  const GoToHome = () => {
+    navigate("/")
+  }
+
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300   ${
@@ -114,9 +118,10 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
         <motion.div
-          className="text-2xl font-bold"
+          className="text-2xl font-bold cursor-pointer"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
+          onClick={GoToHome}
         >
           <div className="lg:w-[18rem] md:w-[14rem] w-[10rem]">
             <img
@@ -243,9 +248,10 @@ const Navbar = () => {
           // className="fixed top-0 right-0 w-full h-full bg-secondry shadow-lg z-40 p-6 flex flex-col gap-6"
         >
           <motion.div
-            className="text-2xl font-bold"
+            className="text-2xl font-bold cursor-pointer"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
+            onClick={GoToHome}
           >
             <div className="w-[10rem]">
               <img

@@ -57,7 +57,7 @@ const StartupServices = () => {
           className="relative w-full h-screen bg-cover-img-two"
           id="banner"
         >
-          <div className="absolute inset-0 bg-black bg-opacity-70"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
           <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
             <h1
               className="font-heading text-4xl md:text-6xl font-bold mb-4"

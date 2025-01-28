@@ -6,7 +6,7 @@ const ContactUsSection = () => {
     <>
       <div className="reletive bg-input-bg/35">
         <section className="relative w-full h-screen bg-custom-radial clip-path-customPolygon ">
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-20"></div>
           <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4 pb-[10rem]">
             <h1
               className="font-heading text-4xl md:text-6xl font-semibold mb-4"

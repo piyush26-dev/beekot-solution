@@ -2,59 +2,65 @@ import { motion } from "framer-motion";
 import Logo from "../../assets/footer-logo.png";
 import { newsletterValidation } from "../../Utils/validation";
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
 
-      const initialState = {
-        full_name: "",
-        email: "",
-        message: "",
-      };
-    
-      const [userDetails, setUserDetails] = useState(initialState);
-      const [errorMessages, setErrorMessages] = useState({});
-      const [loading, setLoading] = useState(false);
-    
-      const handleChange = (e) => {
-        const { name, value } = e.target;
-        const newData = { [name]: value };
-        setUserDetails({
-          ...userDetails,
-          [name]: value,
-        });
-        const { errors } = newsletterValidation(newData);
-        setErrorMessages({
-          ...errorMessages,
-          ...errors,
-        });
-      };
-    
-      const handleSubmit = async (e) => {
-        debugger
-        e.preventDefault();
-        const { errors, isValid } = newsletterValidation(userDetails);
-        setErrorMessages({
-          ...errorMessages,
-          ...errors,
-        });
-        if (!isValid) return;
-        setLoading(true);
-        //  try {
-        //    setLoading(true);
-        //    const response = await sendInquireService(userDetails);
-        //    if (response?.status === 201) {
-        //      toast.success(response?.data?.message);
-        //      setUserDetails(initialState);
-        //    } else {
-        //      toast.error(response?.data?.message || "Somthing went wrong");
-        //    }
-        //  } catch (error) {
-        //    console.log("error", error);
-        //    toast.error("An error occurred. Please try again.");
-        //  } finally {
-        //    setLoading(false);
-        //  }
-      };
+  const initialState = {
+    full_name: "",
+    email: "",
+    message: "",
+  };
+
+  const [userDetails, setUserDetails] = useState(initialState);
+  const [errorMessages, setErrorMessages] = useState({});
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    const newData = { [name]: value };
+    setUserDetails({
+      ...userDetails,
+      [name]: value,
+    });
+    const { errors } = newsletterValidation(newData);
+    setErrorMessages({
+      ...errorMessages,
+      ...errors,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    debugger;
+    e.preventDefault();
+    const { errors, isValid } = newsletterValidation(userDetails);
+    setErrorMessages({
+      ...errorMessages,
+      ...errors,
+    });
+    if (!isValid) return;
+    setLoading(true);
+    //  try {
+    //    setLoading(true);
+    //    const response = await sendInquireService(userDetails);
+    //    if (response?.status === 201) {
+    //      toast.success(response?.data?.message);
+    //      setUserDetails(initialState);
+    //    } else {
+    //      toast.error(response?.data?.message || "Somthing went wrong");
+    //    }
+    //  } catch (error) {
+    //    console.log("error", error);
+    //    toast.error("An error occurred. Please try again.");
+    //  } finally {
+    //    setLoading(false);
+    //  }
+  };
+
+  const GoToHome = () => {
+    navigate("/");
+  };
 
   return (
     <motion.footer
@@ -67,7 +73,10 @@ const Footer = () => {
         {/* Footer Top Section */}
         <div className="flex flex-wrap justify-between items-start md:pb-[1rem]  lg:pb-[3rem]">
           {/* Left Section */}
-          <div className="w-full lg:w-1/3 space-y-6 pb-4">
+          <div
+            className="w-full lg:w-1/3 space-y-6 pb-4 cursor-pointer"
+            onClick={GoToHome}
+          >
             <img
               src={Logo}
               alt="Beekot Solutions Logo"
@@ -86,36 +95,36 @@ const Footer = () => {
               <h3 className="font-semibold text-lg mb-4">Company</h3>
               <ul className="space-y-4">
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to={"/"}
                     className="text-[#B8C1BB] hover:text-[#2F6F6F] duration-300 transition-all"
                   >
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to={"/about"}
                     className="text-[#B8C1BB] hover:text-[#2F6F6F] duration-300 transition-all"
                   >
                     About Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to={"/startup-services"}
                     className="text-[#B8C1BB] hover:text-[#2F6F6F] duration-300 transition-all"
                   >
                     Services
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to={"/contact"}
                     className="text-[#B8C1BB] hover:text-[#2F6F6F] duration-300 transition-all"
                   >
                     Contact Us
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -124,12 +133,12 @@ const Footer = () => {
               <h3 className="font-semibold text-lg mb-4">Know More</h3>
               <ul className="space-y-4">
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to={"/contact"}
                     className="text-[#B8C1BB] hover:text-[#2F6F6F] duration-300 transition-all"
                   >
                     Support
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a

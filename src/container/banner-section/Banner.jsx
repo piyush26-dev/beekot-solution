@@ -4,11 +4,12 @@ import Typewriter from "typewriter-effect";
 import bgImage from "../../assets/bg-image.png"
 import CountUp from "react-countup";
 import BannerVideoBg from "../../assets/home-bg-baaner.mp4";
+import BlacImage from "../../assets/blackImg.png";
 
 const Banner = () => {
   return (
     <div className="reletive">
-      <section className="relative w-full h-screen " id="banner">
+      <section className="relative w-full h-screen overflow-hidden " id="banner">
         {/* Background Video */}
         <video
           className="absolute inset-0 w-full h-full object-cover"
@@ -18,7 +19,15 @@ const Banner = () => {
           muted
           playsInline
         ></video>
-        <div className="absolute inset-0 bg-black bg-opacity-70"></div>
+        {/* Gradient for Bottom Opacity */}
+        {/* <div className="absolute inset-0 bg-gradient-to-t from-black/35 to-transparent"></div> */}
+        <div className="absolute bottom-[-30%] left-0 w-full ">
+          <img
+            src={BlacImage} // Replace with your image source
+            alt="Descriptive alt text"
+            className="w-full object-cover h-full" // Adjust size as per need
+          />
+        </div>
         <div className="pt-[30rem] relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
           <h1
             className="font-heading text-4xl md:text-6xl font-bold mb-4"
