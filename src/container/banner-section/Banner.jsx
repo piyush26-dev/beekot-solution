@@ -62,7 +62,7 @@ const Banner = () => {
             {/* Stat Item */}
             <div className="flex-1 text-center border-b md:border-b-0 md:border-r-2 border-button-text p-4">
               <h2 className="text-3xl font-bold text-button-text">
-                <CountUp end={35} duration={3} />
+                <CountUp end={15} duration={3} />
               </h2>
               <p className="text-text-black">Years Of Experience</p>
             </div>
@@ -71,7 +71,7 @@ const Banner = () => {
               <h2 className="text-3xl font-bold text-button-text  flex items-center justify-center">
                 <div className="flex items-baseline gap-1">
                   <p className="">
-                    <CountUp end={750} duration={3} />
+                    <CountUp end={50} duration={3} />
                   </p>
                   <motion.span
                     initial={{ opacity: 0, x: -10 }}
@@ -93,7 +93,7 @@ const Banner = () => {
               <h2 className="text-3xl font-bold text-button-text  flex items-center justify-center">
                 <div className="flex items-baseline gap-1">
                   <p className="">
-                    <CountUp end={4} duration={3} />
+                    <CountUp end={500} duration={3} />
                   </p>
                   <motion.span
                     initial={{ opacity: 0, x: -10 }}
@@ -104,7 +104,7 @@ const Banner = () => {
                     }}
                     className=""
                   >
-                    K+
+                    +
                   </motion.span>
                 </div>
               </h2>
@@ -115,7 +115,7 @@ const Banner = () => {
               <h2 className="text-3xl font-bold text-button-text  flex items-center justify-center">
                 <div className="flex items-baseline gap-1">
                   <p className="">
-                    <CountUp end={30} duration={3} />
+                    <CountUp end={15} duration={3} />
                   </p>
                   <motion.span
                     initial={{ opacity: 0, x: -10 }}

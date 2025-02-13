@@ -9,6 +9,7 @@ import OurServiceIconTwo from "../../assets/our-service-2.png";
 import OurServiceIconThree from "../../assets/our-service-3.png";
 import OurServiceIconFour from "../../assets/our-service-4.png";
 import OurServiceRectangleAwrrow from "../../assets/our-sercive-rectangle-arrow.png";
+import { useNavigate } from "react-router-dom";
 
 const ourServiceData = [
   {
@@ -42,6 +43,12 @@ const ourServiceData = [
 ];
 
 const OurServices = () => {
+  const navigete = useNavigate();
+
+  const GoToContact = () => {
+    navigete("/contact");
+  };
+
   return (
     <section className="relative w-full min-h-screen bg-cover-img-our-service flex flex-col overflow-hidden">
       <div className="absolute inset-0 bg-secondry bg-opacity-75"></div>
@@ -118,6 +125,7 @@ const OurServices = () => {
             transition={{ duration: 1, delay: 0.6 }}
             whileHover={{ scale: 1.1 }}
             className="bg-[#2F6F6F] font-text text-sm text-white px-6 py-3 rounded-md shadow-md flex items-center gap-4"
+            onClick={GoToContact}
           >
             Learn More <MoveRight className="text-white/80" />
           </motion.button>

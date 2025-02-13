@@ -5,9 +5,17 @@ import { MoveRight } from "lucide-react";
 import OurWorkImg from "../../assets/our-work.png";
 import OurWorkIconOne from "../../assets/our-work-icon.png";
 import OurWorkIconTwo from "../../assets/our-work-icon-2.png";
+import { useNavigate } from "react-router-dom";
 
 
 const OurWork = () => {
+
+  const navigete = useNavigate();
+
+  const GoToContact = () => {
+    navigete("/contact");
+  };
+
   return (
     <div className="bg-secondry md:pt-16 md:pb-[12rem] py-12 overflow-x-hidden over-work ">
       <div className="container mx-auto px-6 flex flex-col md:flex-col lg:flex-row items-center justify-center relative   ">
@@ -53,6 +61,7 @@ const OurWork = () => {
             transition={{ duration: 1, delay: 0.6 }}
             whileHover={{ scale: 1.1 }}
             className="bg-[#2F6F6F] font-text text-sm text-white px-6 py-3 rounded-md shadow-md flex items-center gap-4"
+            onClick={GoToContact}
           >
             Learn More <MoveRight className="text-white/80" />
           </motion.button>

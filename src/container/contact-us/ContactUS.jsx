@@ -27,7 +27,7 @@ const contactUsData = [
     id: 1,
     Icon: ContactUSIconOne,
     title: "Call Us",
-    contant: "9160888209",
+    contant: "9860888209",
   },
   {
     id: 2,
@@ -69,18 +69,18 @@ const ContactUS = () => {
     });
   };
 
-    const handlePhoneChange = (value, country) => {
-      const phoneWithoutCountryCode = value
-        .replace(`+${country.dialCode}`, "")
-        .trim();
-      const e = {
-        target: {
-          value: phoneWithoutCountryCode,
-          name: "phone_no",
-        },
-      };
-      handleChange(e);
+  const handlePhoneChange = (value, country) => {
+    const phoneWithoutCountryCode = value
+      .replace(`+${country.dialCode}`, "")
+      .trim();
+    const e = {
+      target: {
+        value: phoneWithoutCountryCode,
+        name: "phone_no",
+      },
     };
+    handleChange(e);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();

@@ -5,34 +5,46 @@ import industryImage1 from "../../assets/enterprises-img.png";
 import industryImage2 from "../../assets/startup-img.png";
 import industryImage3 from "../../assets/sme-img.jpg";
 import industryImage4 from "../../assets/government-img.png";
+import { useNavigate } from "react-router-dom";
 
-
-  const industries = [
-    {
-      id: 1,
-      name: "Enterprises",
-      image: industryImage1,
-      paragraph:
-        "We are glad to serve huge firms and large enterprises with high revenue along with a huge number of employees. We assure you to provide efficiency and deliver exceptional value to our esteemed clients.",
-    },
-    {
-      id: 2,
-      name: "Startup",
-      image: industryImage2,
-      paragraph:
-        "The firms which are on their developing stage and limited with their operations, funding, etc. Specially focused guidance from our expertise helps a blooming startup for their further growth.",
-    },
-    {
-      id: 3,
-      name: "SME",
-      image: industryImage3,
-      paragraph:
-        "Small and Medium Enterprises that maintain revenues, assets, or number of employees below a certain level. When it comes to SMEs we help them to build strong relationships with their customers.",
-    },
-    { id: 4, name: "Government", image: industryImage4, paragraph: "Where these companies need to understand various crises and look after a huge number of citizens, we assure them to provide a hassle-free service with the help of our professionals and upcoming technologies." },
-  ];
+const industries = [
+  {
+    id: 1,
+    name: "Enterprises",
+    image: industryImage1,
+    paragraph:
+      "We are glad to serve huge firms and large enterprises with high revenue along with a huge number of employees. We assure you to provide efficiency and deliver exceptional value to our esteemed clients.",
+  },
+  {
+    id: 2,
+    name: "Startup",
+    image: industryImage2,
+    paragraph:
+      "The firms which are on their developing stage and limited with their operations, funding, etc. Specially focused guidance from our expertise helps a blooming startup for their further growth.",
+  },
+  {
+    id: 3,
+    name: "SME",
+    image: industryImage3,
+    paragraph:
+      "Small and Medium Enterprises that maintain revenues, assets, or number of employees below a certain level. When it comes to SMEs we help them to build strong relationships with their customers.",
+  },
+  {
+    id: 4,
+    name: "Government",
+    image: industryImage4,
+    paragraph:
+      "Where these companies need to understand various crises and look after a huge number of citizens, we assure them to provide a hassle-free service with the help of our professionals and upcoming technologies.",
+  },
+];
 
 const IndustryWeServe = () => {
+  const navigete = useNavigate();
+
+  const GoToContact = () => {
+    navigete("/contact");
+  };
+
   return (
     <section className="py-16">
       <div className="container mx-auto px-6 space-y-8">
@@ -87,8 +99,9 @@ const IndustryWeServe = () => {
             <motion.button
               whileHover={{ scale: 1.1 }}
               className="bg-[#2F6F6F] font-text text-sm text-white px-6 py-3 rounded-md shadow-md"
+              onClick={GoToContact}
             >
-              Get Started
+             Learn More
             </motion.button>
           </div>
         </div>
